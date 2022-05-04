@@ -156,12 +156,14 @@ namespace e_Agenda.WinApp.Telas_Compromissos
                 "Informativo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-            if (dateTimePickerHoraInicioPeriodo.Value > dateTimePickerHoraFimPeriodo.Value)
-            {
-                MessageBox.Show("O horário inicial deve ser menor que o horário final!",
-                "Informativo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                return;
-            }
+
+            if (dateTimePickerDataInicioPeriodo.Value.Date == dateTimePickerDataFimPeriodo.Value.Date)
+                if (dateTimePickerHoraInicioPeriodo.Value >= dateTimePickerHoraFimPeriodo.Value)
+                {
+                    MessageBox.Show("O horário inicial deve ser menor que o horário final!",
+                    "Informativo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
 
             DateTime inicioFiltro = IniciarDateTimeFiltro(dateTimePickerDataInicioPeriodo, dateTimePickerHoraInicioPeriodo);
 
