@@ -33,5 +33,10 @@ namespace e_Agenda.WinApp
             TelaListagemContatos tela = new TelaListagemContatos();
             panelPrincipal.Controls.Add(tela);
         }
+
+        private void TelaPrincipal_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
