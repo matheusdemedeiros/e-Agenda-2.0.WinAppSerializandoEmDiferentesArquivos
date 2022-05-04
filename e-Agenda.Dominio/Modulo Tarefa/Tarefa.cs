@@ -55,6 +55,7 @@ namespace e_Agenda.Dominio.Modulo_Tarefa
                     prioridade = 3;
             }
         }
+        
         public Status StatusTarefa
         {
             get
@@ -161,6 +162,5 @@ namespace e_Agenda.Dominio.Modulo_Tarefa
             else
                 return 0;
         }
-
     }
 }
